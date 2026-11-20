@@ -329,6 +329,10 @@ p:last-child {
   white-space: nowrap;
 }
 
+.research-overview {
+  max-width: 85ch;
+}
+
 .research-blocks {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
