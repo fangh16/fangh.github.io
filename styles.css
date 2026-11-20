@@ -214,7 +214,11 @@ p:last-child {
 
 .lead,
 .section-grid p,
-.research-blocks p,
+.research-overview p,
+.research-blocks p {
+  text-align: left;
+}
+
 .publication-card p:not(.pub-meta),
 .all-publications li {
   text-align: justify;
@@ -433,6 +437,33 @@ code {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+@media (min-width: 861px) and (max-width: 1100px) {
+  .timeline article {
+    grid-template-columns: 110px minmax(0, 1fr);
+    column-gap: 18px;
+    row-gap: 4px;
+  }
+
+  .timeline span {
+    grid-row: 1 / span 2;
+  }
+
+  .timeline-meta {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .timeline .no-wrap {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1100px) {
+  .research-blocks {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 860px) {
